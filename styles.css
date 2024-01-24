@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Single+Day&family=Space+Grotesk&display=swap');
+/* Resetting defaults */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+/* ************************************* */
+/* Header section welcome banner, text, navbar */
+/* ************************************ */
+/* Welcome banner */
+#welcome {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-image: url("bird-bg.jpg");
+    background-size: cover;
+}
+
+/* Welcome text span */
+#welcome span {
+    display: inline-block;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Single Day', cursive;
+}
+
+/* navbar */
+nav {
+    height: 7vh;
+    width: 100%;
+    background-color: black;
+    font-family: 'Space Grotesk', sans-serif;
+    position: fixed;
+    z-index: 999;
+    padding: 0;
+    margin: 0;
+}
+
+/* list of links */
+.list-link {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* list item */
+.item-link {
+    display: inline;
+    height: 100%;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Individual link */
+.link {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+}
+
+/* links on hover */
+.link:hover {
+    background-color: grey;
+    color: black;
+}
+
+/* link active */
+.active {
+    background-color: white;
+    color: black;
+}
+/* ****************************************************** */
+
+
+
+
+/* ****************************************************** */
+/* Main section  */
+/* ****************************************************** */
+/* About  container*/
+.about {
+    display: grid;
+    width: 90vw;
+    margin: 50px auto;
+    background-color: white;
+    border: 2px solid black;
+    grid-template-columns: auto;
+    grid-template-rows: 50px auto auto auto;
+}
+
+/* Name hrad inside about container */
+#name-head {
+    margin: 20px auto;
+}
+
+
+/* Line divider under some head */
+.line-divider {
+    margin: 20px auto;
+    border: 3px solid black
+}
+
+/* Profile Picture */
+.profile-img {
+    width: 50vw;
+    padding: 5% 15%;
+}
+
+/* Intro text about me */
+#intro {
+    width: 100%;
+    padding: 5%;
+    font-size:25px;
+    line-height: 60px;
+}
+
+.projects{
+    width:50vh;
+    font-size: 25px;
+    padding: 5%;
+    text-align:left;
+}
+
+
+#proj-text{
+    font-size:50px;
+}
+
+main{
+    font-family: 'Caveat', cursive;
+}
+
+
+/* ************************************************** */
+/* Only desktop view */
+/* ************************************************** */
+@media (min-width: 990px) {
+    body{
+        margin-top:7vh;
+    }
+    nav{
+        top:0;
+    }
+    /* H2 in desktop */
+    h2 {
+        font-size: 45px;
+    }
+
+    /* ABOUT */
+    .about {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    /* NAME head grid colum for desktop */
+    .name-head{
+        grid-column: 1 / 3;
+    }
+
+    /* Intro text settings for desktop */
+    #intro{
+        padding-top: 150px;
+        letter-spacing: 3px;
+        word-spacing: 10px;
+    }
+
+    /* Line divider for desktop */
+    .line-divider {
+        width: 70%;
+        grid-column: 1 / 3;
+    }
+
+    /* profile picture for desktop */
+    .profile-img {
+        grid-column: 1/2;
+        grid-row: 3;
+    }
+
+
+
+
+
+
+
+
+    /* ****************************************************************************** */
+    /* Contact page */
+    /* ******************************************************************************* */
+    .projects{
+        padding-top:50px;
+    }
+}
+
+@media (max-width: 989px) {
+    /* Welcome banner for mobile devices */
+    #welcome {
+        height: 20vh;
+    }
+
+    /* Line divider for Mobile devices */
+    .line-divider {
+        width: 50%;
+    }
+
+
+    /* Navs at bottom in mobile devices */
+    nav {
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    /* Nav activer link */
+    .active {
+        border-radius: 0px 0px 40px 40px;
+        background-color: white;
+        color: black;
+    }
+
+    /* Intro text welcome in kobile devices */
+    #intro{
+        font-size:40px;
+    }
+
+    /* H2 settings for mobile devices */
+    h2{
+        font-size: 55px;
+    }
+    body{
+        margin-bottom: 7vh;
+    }
+}
